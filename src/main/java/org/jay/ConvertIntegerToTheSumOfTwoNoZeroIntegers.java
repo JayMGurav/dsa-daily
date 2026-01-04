@@ -7,7 +7,7 @@ import java.util.Arrays;
 */
 public class ConvertIntegerToTheSumOfTwoNoZeroIntegers {
 
-    public boolean isNonZero(int n) {
+    public boolean isNotNonZero(int n) {
         while (n > 0) {
             if (n % 10 == 0) return false;
             n = n / 10;
@@ -28,7 +28,7 @@ public class ConvertIntegerToTheSumOfTwoNoZeroIntegers {
     public int[] getNoZeroIntegers2(int n) {
         for (int a = 1; a < n; a++) {
             int b = n - a;
-            if (isNonZero(a) && isNonZero(b)) {
+            if (isNotNonZero(a) && isNotNonZero(b)) {
                 return new int[]{a, b};
             }
         }
